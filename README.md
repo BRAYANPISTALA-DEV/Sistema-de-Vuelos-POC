@@ -23,9 +23,9 @@
 3. Git (opcional, para clonar)
 
 ### Paso 1: Preparar el Proyecto
-# Crear directorio del proyecto y que chille!
-mkdir Ivone Airlines
-cd Ivone Airlines
+# Crear directorio del proyecto
+mkdir Sistema de Vuelos-POC
+cd Sistema de Vuelos-POC
 
 ### Paso 2: Levantar las Bases de Datos con Docker
 # Iniciar PostgreSQL y MongoDB
