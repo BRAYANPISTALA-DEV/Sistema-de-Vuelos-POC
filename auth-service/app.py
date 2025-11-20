@@ -116,7 +116,7 @@ def login(credentials: UserLogin, db: Session = Depends(get_db)):
             headers={"WWW-Authenticate": "Bearer"},
         )
     
-    # Crear token para mas placer
+    # Crear token 
     access_token = create_access_token(
         data={"sub": str(user.id), "role": user.role, "email": user.email}
     )

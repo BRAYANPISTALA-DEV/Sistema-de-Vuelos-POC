@@ -51,7 +51,7 @@ class TicketResponse(BaseModel):
     seat_number: str
     status: str
 
-# Función para verificar token Para mas placer, claro esta
+# Función para verificar token 
 def verify_token(authorization: str = Header(None)):
     if not authorization:
         raise HTTPException(

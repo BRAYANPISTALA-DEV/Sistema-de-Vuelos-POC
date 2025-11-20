@@ -27,8 +27,8 @@ AUTH_SERVICE_URL = "http://localhost:8001"
 class PaymentCreate(BaseModel):
     booking_id: str
     amount: float
-    payment_method: str  # credit_card, debit_card, paypal, etc. money es money no importa de donde proceda
-    card_number: str  # Simulado, porque no nos dejaran adquirir funtes de recursos de manera ilegitima
+    payment_method: str  # credit_card, debit_card, paypal, etc. 
+    card_number: str  # Simulado
 
 class PaymentResponse(BaseModel):
     id: int
@@ -50,7 +50,7 @@ class InvoiceResponse(BaseModel):
     created_at: str
     invoice_number: str
 
-# Función para verificar token, para mas placer
+# Función para verificar token
 def verify_token(authorization: str = Header(None)):
     if not authorization:
         raise HTTPException(
@@ -81,7 +81,7 @@ def generate_transaction_id():
 
 def simulate_payment_processing(card_number: str, amount: float):
     """Simula el procesamiento de pago con una pasarela"""
-    # Simulación: rechazar si el último dígito de la tarjeta es 0 (Como para que vean que si se valida)
+    # Simulación: rechazar si el último dígito de la tarjeta es 0 
     if card_number[-1] == '0':
         return False
     return True

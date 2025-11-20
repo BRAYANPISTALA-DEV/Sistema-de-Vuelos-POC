@@ -49,7 +49,7 @@ class FlightResponse(BaseModel):
     airline_id: int
     created_at: datetime
 
-# Función para verificar token, para mas placer
+# Función para verificar token
 def verify_token(authorization: str = Header(None)):
     if not authorization:
         raise HTTPException(
@@ -89,7 +89,7 @@ def create_flight(
     db: Session = Depends(get_db),
     user_data: dict = Depends(verify_token)
 ):
-    # Validamos lo siguiente para que no se pasen de listos y claro esta, para mas placer
+    # Validamos lo siguiente 
     # Solo aerolíneas pueden crear vuelos
     if user_data["role"] != "airline":
         raise HTTPException(

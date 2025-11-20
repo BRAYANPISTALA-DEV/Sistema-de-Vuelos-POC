@@ -32,7 +32,7 @@ export default function Register() {
       <div className="auth-card">
         <div className="auth-header">
           <h1>Crear Cuenta</h1>
-          <p>Únete a Ivone Airlines hoy</p>
+          <p>Unete Airlines hoy</p>
         </div>
 
         {error && <div className="error-message">{error}</div>}
