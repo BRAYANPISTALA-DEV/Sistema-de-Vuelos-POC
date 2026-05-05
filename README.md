@@ -179,3 +179,5 @@ Colección: bookings
   "created_at": "ISODate",
   "checked_in_at": "ISODate"
 }
+
+## Prueba de pipeline CI/CD
