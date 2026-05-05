@@ -28,4 +28,14 @@ jobs:
 
       - name: Build
         run: npm run build || echo "No build necesario"
+       deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    - name: Deploy a producción
+      run: |
+        echo "Desplegando aplicación..."
   
