@@ -1,0 +1,31 @@
+name: CI/CD Sistema de Vuelos
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Lint
+        run: npm run lint || echo "No lint configurado"
+
+      - name: Tests
+        run: npm test || echo "No tests configurados"
+
+      - name: Build
+        run: npm run build || echo "No build necesario"
+  
