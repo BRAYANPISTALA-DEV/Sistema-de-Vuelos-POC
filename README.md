@@ -180,4 +180,4 @@ Colección: bookings
   "checked_in_at": "ISODate"
 }
 
-## Prueba de pipeline CI/CD
+## Prueba de pipeline CI/CD para verificación a través de este código.
